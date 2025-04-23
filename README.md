@@ -38,11 +38,8 @@ version            # Show version
 ```bash
 add "Buy milk"
 add "Buy bread"
-list
+list --search "milk" --sort "name" --filter "done"
 remove 2
-search "milk"
-sort "name"
-filter "done"
 edit 1 "Buy eggs"
 undo
 redo
