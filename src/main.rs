@@ -19,8 +19,8 @@ fn main() {
         Commands::Remove { id } => {
             commands::remove::run(id);
         }
-        Commands::Update { id, name, description , status} => {
-            commands::update::run(id, name, description, status);
+        Commands::Edit { id, name, description , status} => {
+            commands::edit::run(id, name, description, status);
         }
     }
 }

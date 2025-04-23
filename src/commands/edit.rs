@@ -4,8 +4,8 @@ pub fn run( id: usize, name: Option<String>, description: Option<String>, status
     // Check if the status is valid
     if let Some(status) = status {
         if let Some(task_status) = crate::task::TaskStatus::from_str(&status) {
-            // Update the task status
-            println!("Task status updated to: {:?}", task_status);
+            // edit the task status
+            println!("Task status editd to: {:?}", task_status);
         } else {
             eprintln!("Invalid task status: {}", status);
             return;
@@ -31,7 +31,7 @@ pub fn run( id: usize, name: Option<String>, description: Option<String>, status
         if let Err(e) = storage::save_tasks(&tasks) {
             eprintln!("Failed to save tasks: {}", e);
         } else {
-            println!("Task updated successfully");
+            println!("Task editd successfully");
         }
     } else {
         eprintln!("Task with ID {} not found", id);

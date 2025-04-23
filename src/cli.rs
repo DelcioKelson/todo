@@ -27,9 +27,9 @@ pub enum Commands {
         /// The ID of the task to remove
         id: usize,
     },
-    /// Update a task
-    Update {
-        /// The ID of the task to update
+    /// Edit a task
+    Edit {
+        /// The ID of the task to edit
         #[arg(short, long)]
         id: usize,
         /// The new name of the task
